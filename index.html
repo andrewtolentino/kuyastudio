@@ -4,7 +4,44 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>kuya studio — pottery studio in San Francisco</title>
-<meta name="description" content="kuya studio is a pottery studio in San Francisco making quiet, functional objects — wheel-thrown and slipcast." />
+<meta name="description" content="kuya studio is a pottery studio in San Francisco making quiet, functional ceramics for everyday — wheel-thrown and slipcast, made in small batches with intention and care." />
+<link rel="canonical" href="https://kuya.studio/" />
+<meta name="theme-color" content="#f6f3ee" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="kuya studio" />
+<meta property="og:title" content="kuya studio — pottery studio in San Francisco" />
+<meta property="og:description" content="Quiet objects, intentionally made by hand. Wheel-thrown and slipcast ceramics, made in small batches in San Francisco." />
+<meta property="og:url" content="https://kuya.studio/" />
+<meta property="og:image" content="https://kuya.studio/assets/pottery3.jpg" />
+<meta property="og:image:alt" content="Speckled bud vase holding a eucalyptus stem" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="kuya studio — pottery studio in San Francisco" />
+<meta name="twitter:description" content="Quiet objects, intentionally made by hand. Wheel-thrown and slipcast ceramics, made in small batches in San Francisco." />
+<meta name="twitter:image" content="https://kuya.studio/assets/pottery3.jpg" />
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "kuya studio",
+  "description": "Pottery studio in San Francisco making quiet, functional ceramics for everyday — wheel-thrown and slipcast, made in small batches.",
+  "url": "https://kuya.studio/",
+  "image": "https://kuya.studio/assets/pottery3.jpg",
+  "logo": "https://kuya.studio/assets/favicon.svg",
+  "foundingDate": "2017",
+  "sameAs": ["https://www.instagram.com/kuya.studio/"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "San Francisco",
+    "addressRegion": "CA",
+    "addressCountry": "US"
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
@@ -97,16 +134,14 @@
     border-radius: 180px 180px 12px 12px;
     overflow: hidden;
   }
-  .hero-img img {
+
+  .hero-img video {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0;
-    transition: opacity 2.5s ease-in-out;
   }
-  .hero-img img.active { opacity: 1; }
 
   footer { padding: clamp(14px, 2vh, 22px) 0; }
   .foot-inner {
@@ -121,6 +156,14 @@
     color: var(--ink-soft);
     letter-spacing: 0.04em;
   }
+  .ig-link {
+    color: var(--clay);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  .ig-link:hover { color: var(--ink); border-color: var(--ink); }
 
   @media (max-width: 800px) {
     .hero-grid { grid-template-columns: 1fr; gap: 28px; }
@@ -143,13 +186,11 @@
       <h1>kuya studio</h1>
       <p class="subhead">Quiet objects, intentionally made by hand.</p>
       <p>A pottery studio in San Francisco making functional pieces for everyday. Thrown on the wheel or slipcast from molds made in-house, finished in soft, earthy glazes.</p>
-      <p><em>Kuya</em>: Tagalog for “older brother” is a nod to family, thoughtfulness, and love that these pieces are meant to bring into your life. Made in small batches, with intention and care.</p>
+      <p><em>Kuya</em> is Tagalog for “older brother.” It's a nod to family, thoughtfulness, and love that these pieces are meant to bring into your life. Made in small batches, with intention and care.</p>
+      <p>Follow along <a class="ig-link" href="https://www.instagram.com/kuya.studio/" target="_blank" rel="noopener">@kuya.studio</a></p>
     </div>
     <div class="hero-img">
-      <img src="assets/pottery3.jpg" alt="Speckled bud vase holding a eucalyptus stem" class="active" />
-      <img src="assets/pottery1.jpg" alt="White speckled bowl with carved swirling lines" />
-      <img src="assets/pottery2.jpg" alt="Small speckled cup with flared rim and raw clay base" />
-      <img src="assets/pottery5.jpg" alt="Speckled bowl with warm white glaze and exposed clay foot" />
+      <video src="assets/reel.mp4?v=3" poster="assets/pottery3.jpg" autoplay muted loop playsinline aria-label="Reel of pottery being made in the studio"></video>
     </div>
   </div>
 </main>
@@ -162,16 +203,11 @@
 </footer>
 
 <script>
-  (function () {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    var imgs = document.querySelectorAll(".hero-img img");
-    var current = 0;
-    setInterval(function () {
-      imgs[current].classList.remove("active");
-      current = (current + 1) % imgs.length;
-      imgs[current].classList.add("active");
-    }, 6000);
-  })();
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var reel = document.querySelector(".hero-img video");
+    reel.removeAttribute("autoplay");
+    reel.pause();
+  }
 </script>
 
 </body>
