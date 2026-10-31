@@ -4,21 +4,21 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>kuya studio — pottery studio in San Francisco</title>
-<meta name="description" content="kuya studio is a pottery studio in San Francisco making quiet, functional ceramics for everyday — wheel-thrown and slipcast, made in small batches with intention and care." />
+<meta name="description" content="kuya studio is a pottery studio in San Francisco making functional ceramics for everyday — wheel-thrown and slipcast, glazed by hand, made in small batches. Made by hand, a little crooked." />
 <link rel="canonical" href="https://kuya.studio/" />
-<meta name="theme-color" content="#f6f3ee" />
+<meta name="theme-color" content="#ffffff" />
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="kuya studio" />
 <meta property="og:title" content="kuya studio — pottery studio in San Francisco" />
-<meta property="og:description" content="Quiet objects, intentionally made by hand. Wheel-thrown and slipcast ceramics, made in small batches in San Francisco." />
+<meta property="og:description" content="Made by hand. A little crooked. Wheel-thrown and slipcast ceramics, made in small batches in San Francisco." />
 <meta property="og:url" content="https://kuya.studio/" />
 <meta property="og:image" content="https://kuya.studio/assets/pottery3.jpg" />
 <meta property="og:image:alt" content="Speckled bud vase holding a eucalyptus stem" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="kuya studio — pottery studio in San Francisco" />
-<meta name="twitter:description" content="Quiet objects, intentionally made by hand. Wheel-thrown and slipcast ceramics, made in small batches in San Francisco." />
+<meta name="twitter:description" content="Made by hand. A little crooked. Wheel-thrown and slipcast ceramics, made in small batches in San Francisco." />
 <meta name="twitter:image" content="https://kuya.studio/assets/pottery3.jpg" />
 
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -28,7 +28,7 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "kuya studio",
-  "description": "Pottery studio in San Francisco making quiet, functional ceramics for everyday — wheel-thrown and slipcast, made in small batches.",
+  "description": "Pottery studio in San Francisco making functional ceramics for everyday — wheel-thrown and slipcast, made in small batches.",
   "url": "https://kuya.studio/",
   "image": "https://kuya.studio/assets/pottery3.jpg",
   "logo": "https://kuya.studio/assets/favicon.svg",
@@ -42,36 +42,42 @@
   }
 }
 </script>
+
+<link rel="preload" href="assets/fonts/TAYBasalRegular.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
 <style>
   @font-face {
-    font-family: "Tagada";
-    src: url("assets/fonts/Tagada-Regular.woff") format("woff"),
-         url("assets/fonts/Tagada-Regular.eot") format("embedded-opentype");
+    font-family: "Basal";
+    src: url("assets/fonts/TAYBasalRegular.woff2") format("woff2"),
+         url("assets/fonts/TAYBasalRegular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
 
   :root {
-    --bg: #f6f3ee;
-    --ink: #2b2724;
-    --ink-soft: #6f6759;
-    --clay: #a98a68;
-    --line: #ddd5c9;
-    --sans: "Inter", -apple-system, sans-serif;
+    --white: #ffffff;
+    --ink: #17120f;
+    --orange: #f59e0b;
+    --pink: #f48fb1;
+    --sky: #3a9fe0;
+    --green: #3aa56b;
+    --redorange: #e0572b;
+    --head: "Basal", "Arial Black", Arial, sans-serif;
+    --sans: "DM Sans", -apple-system, sans-serif;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    background: var(--bg);
+    background: var(--white);
     color: var(--ink);
     font-family: var(--sans);
-    font-weight: 300;
-    line-height: 1.65;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     min-height: 100dvh;
     display: flex;
@@ -88,59 +94,114 @@
   main {
     flex: 1;
     display: flex;
-    align-items: center;
-    padding: clamp(8px, 2vh, 24px) 0;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(16px, 3vh, 36px) 0;
+  }
+
+  h1 {
+    font-family: var(--head);
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: min(52px, 5vw);
+    line-height: 1;
+    letter-spacing: 0.01em;
+    margin-bottom: clamp(12px, 2.2vh, 22px);
+    white-space: nowrap;
   }
 
   .hero-grid {
     display: grid;
     grid-template-columns: 1.05fr 0.95fr;
-    gap: clamp(32px, 5vw, 80px);
+    gap: clamp(32px, 5vw, 72px);
     align-items: center;
   }
 
-  h1 {
-    font-family: "Tagada", Georgia, serif;
-    font-weight: normal;
-    font-size: clamp(36px, 4.8vw, 56px);
-    line-height: 1.1;
-    letter-spacing: 0.01em;
-    margin-bottom: clamp(12px, 1.8vh, 18px);
-  }
-
   .subhead {
-    font-style: italic;
-    font-weight: 300;
-    font-size: clamp(18px, 2vw, 22px);
-    color: var(--clay);
-    margin-bottom: clamp(18px, 2.8vh, 30px);
+    font-family: var(--head);
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: clamp(20px, 2.2vw, 26px);
+    line-height: 1.1;
+    margin-bottom: clamp(16px, 2.6vh, 26px);
   }
 
   .hero-text p {
-    max-width: 48ch;
-    color: var(--ink-soft);
-    font-size: 16px;
+    max-width: 62ch;
     margin-bottom: clamp(14px, 2vh, 20px);
   }
-  .hero-text p:last-child { margin-bottom: 0; }
-  .hero-text p strong { color: var(--ink); font-weight: 500; }
-  .hero-text p em { font-style: italic; color: var(--clay); }
+  .hero-text p strong { font-weight: 500; }
 
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 0 28px;
+    margin-top: clamp(6px, 1.2vh, 14px);
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    color: var(--ink);
+    text-decoration: none;
+    background: var(--white);
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    transition: background 0.15s ease;
+  }
+  .btn:hover { background: var(--pink); }
+
+  .hero-media {
+    position: relative;
+  }
+  .hero-media::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translate(16px, 16px);
+    background: var(--orange);
+    border: 2px solid var(--ink);
+    border-radius: 28px;
+  }
   .hero-img {
     position: relative;
     width: 100%;
     aspect-ratio: 4 / 5;
-    max-height: min(66vh, 560px);
-    border-radius: 180px 180px 12px 12px;
+    max-height: min(58vh, 520px);
+    border: 2px solid var(--ink);
+    border-radius: 28px;
     overflow: hidden;
+    background: var(--white);
   }
-
   .hero-img video {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .sticker {
+    position: absolute;
+    top: -30px;
+    right: -22px;
+    z-index: 2;
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    background: var(--sky);
+    border: 2px solid var(--ink);
+    transform: rotate(8deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    font-family: var(--head);
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 1.3;
   }
 
   footer { padding: clamp(14px, 2vh, 22px) 0; }
@@ -152,45 +213,49 @@
     flex-wrap: wrap;
   }
   .foot-note {
-    font-size: 12px;
-    color: var(--ink-soft);
-    letter-spacing: 0.04em;
+    font-size: 14px;
+    font-weight: 500;
   }
-  .ig-link {
-    color: var(--clay);
-    text-decoration: none;
-    border-bottom: 1px solid var(--line);
-    padding-bottom: 2px;
-    transition: color 0.2s ease, border-color 0.2s ease;
-  }
-  .ig-link:hover { color: var(--ink); border-color: var(--ink); }
 
   @media (max-width: 800px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+    body { font-size: 17px; }
+    main { padding: 12px 0 16px; }
+    h1 { font-size: min(44px, 11.6vw); margin-bottom: 14px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 18px; }
+    .subhead { margin-bottom: 12px; }
+    .hero-text p { margin-bottom: 12px; }
+    .hero-media { order: -1; }
     .hero-img {
-      order: -1;
-      max-height: 34vh;
+      max-height: 24vh;
       aspect-ratio: 5 / 4;
-      border-radius: 130px 130px 10px 10px;
       margin: 0 auto;
     }
-    h1 br { display: none; }
+    .hero-media::before { transform: translate(10px, 10px); border-radius: 24px; }
+    .hero-img { border-radius: 24px; }
+    .btn { width: 100%; justify-content: center; }
+    .sticker { width: 88px; height: 88px; font-size: 11px; top: -12px; right: -4px; padding: 10px; }
+    footer { padding: 10px 0 14px; }
   }
 </style>
 </head>
 <body>
 
 <main>
-  <div class="wrap hero-grid">
-    <div class="hero-text">
-      <h1>kuya studio</h1>
-      <p class="subhead">Quiet objects, intentionally made by hand.</p>
-      <p>A pottery studio in San Francisco making functional pieces for everyday. Thrown on the wheel or slipcast from molds made in-house, finished in soft, earthy glazes.</p>
-      <p><em>Kuya</em> is Tagalog for “older brother.” It's a nod to family, thoughtfulness, and love that these pieces are meant to bring into your life. Made in small batches, with intention and care.</p>
-      <p>Follow along <a class="ig-link" href="https://www.instagram.com/kuya.studio/" target="_blank" rel="noopener">@kuya.studio</a></p>
-    </div>
-    <div class="hero-img">
-      <video src="assets/reel.mp4?v=3" poster="assets/pottery3.jpg" autoplay muted loop playsinline aria-label="Reel of pottery being made in the studio"></video>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1>kuya studio</h1>
+        <p class="subhead">Made by hand. A little crooked.</p>
+        <p>A pottery studio in San Francisco making functional pieces for everyday. Thrown on the wheel or slipcast from molds I make in-house, then glazed by hand.</p>
+        <p><strong>Kuya</strong> is Tagalog for older brother, and I am one. It&rsquo;s a nod to family and love, and I&rsquo;m loud about both. Everything is made in small batches. Not every piece comes out perfect, and that&rsquo;s how you know I made it.</p>
+        <a class="btn" href="https://www.instagram.com/kuya.studio/" target="_blank" rel="noopener">Come say hi: @kuya.studio</a>
+      </div>
+      <div class="hero-media">
+        <span class="sticker" role="note">No two alike, on purpose.</span>
+        <div class="hero-img">
+          <video src="assets/reel.mp4?v=3" poster="assets/pottery3.jpg" autoplay muted loop playsinline aria-label="Reel of pottery being made in the studio"></video>
+        </div>
+      </div>
     </div>
   </div>
 </main>
@@ -201,14 +266,6 @@
     <p class="foot-note">San Francisco, CA</p>
   </div>
 </footer>
-
-<script>
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    var reel = document.querySelector(".hero-img video");
-    reel.removeAttribute("autoplay");
-    reel.pause();
-  }
-</script>
 
 </body>
 </html>
