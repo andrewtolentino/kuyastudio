@@ -97,6 +97,47 @@
     flex-direction: column;
     justify-content: center;
     padding: clamp(16px, 3vh, 36px) 0;
+    position: relative;
+    z-index: 1;
+  }
+  footer { position: relative; z-index: 1; }
+
+  .bg {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .bg svg {
+    position: absolute;
+  }
+  .bg-star {
+    width: clamp(170px, 24vw, 330px);
+    top: calc(clamp(170px, 24vw, 330px) / -2.6);
+    left: calc(clamp(170px, 24vw, 330px) / -2.8);
+    fill: var(--redorange);
+    transform: rotate(14deg);
+    animation: bg-spin 90s linear infinite;
+  }
+  .bg-daisy {
+    width: clamp(260px, 36vw, 480px);
+    bottom: calc(clamp(260px, 36vw, 480px) / -2.9);
+    right: calc(clamp(260px, 36vw, 480px) / -2.9);
+    fill: var(--sky);
+    transform: rotate(-9deg);
+    animation: bg-spin-rev 140s linear infinite;
+  }
+  @keyframes bg-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  @keyframes bg-spin-rev {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .bg svg { animation: none; }
   }
 
   h1 {
@@ -189,7 +230,7 @@
     width: 118px;
     height: 118px;
     border-radius: 50%;
-    background: var(--sky);
+    background: var(--green);
     border: 2px solid var(--ink);
     transform: rotate(8deg);
     display: flex;
@@ -239,6 +280,24 @@
 </style>
 </head>
 <body>
+
+<div class="bg" aria-hidden="true">
+  <svg class="bg-star" viewBox="0 0 200 200"><polygon points="100.0,3.0 114.2,65.8 168.6,31.4 134.2,85.8 197.0,100.0 134.2,114.2 168.6,168.6 114.2,134.2 100.0,197.0 85.8,134.2 31.4,168.6 65.8,114.2 3.0,100.0 65.8,85.8 31.4,31.4 85.8,65.8"/></svg>
+  <svg class="bg-daisy" viewBox="0 0 200 200">
+    <g>
+      <ellipse cx="100" cy="52" rx="22" ry="48"/>
+      <ellipse cx="100" cy="52" rx="22" ry="48" transform="rotate(45 100 100)"/>
+      <ellipse cx="100" cy="52" rx="22" ry="48" transform="rotate(90 100 100)"/>
+      <ellipse cx="100" cy="52" rx="22" ry="48" transform="rotate(135 100 100)"/>
+      <ellipse cx="100" cy="52" rx="22" ry="48" transform="rotate(180 100 100)"/>
+      <ellipse cx="100" cy="52" rx="22" ry="48" transform="rotate(225 100 100)"/>
+      <ellipse cx="100" cy="52" rx="22" ry="48" transform="rotate(270 100 100)"/>
+      <ellipse cx="100" cy="52" rx="22" ry="48" transform="rotate(315 100 100)"/>
+      <circle cx="100" cy="100" r="28"/>
+    </g>
+    <circle cx="100" cy="100" r="7" fill="#ffffff"/>
+  </svg>
+</div>
 
 <main>
   <div class="wrap">
